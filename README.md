@@ -19,7 +19,7 @@ But... there is a problem... the game has a password... and I forget it but I'm 
 - Mouse: to move the space ship around the planet
 - Right click/Space bar: shooting
 
-## 🧪 Testing and Bug Reporting Exercise
+## 🧪 Testing and Bug Reporting Exercise
 This game serves multiple purposes:
 
 1. Testing the game thoroughly using various automated testing methods (unit tests, integration tests, end-to-end tests, etc.). 
@@ -29,15 +29,19 @@ This game serves multiple purposes:
 ## 📋 Evaluation Criteria
 The evaluation for participating in the development and testing of this game will be as follows:
 
-- Creating a Manual Test Plan: 1 point.
-- Automated Testing for Specific Features: Testing features such as movement, scoring, collision, and - game end automatically will earn 5 points for the first test case created and 1 extra point for each feature successfully automated. The test has to work.
-- Different Types of Automated Tests: 1 point for each type of automated test (unit, integration, end-to-end, etc.) that is functional.
-- Best Coverage for Each Feature: 1 point for achieving the best test coverage for each feature (Scoring, Movement, End Game, Collision System).
-- First to Correctly Report a Bug: 1 point for being the first to correctly report a bug (report only one line is not a good practice)
-- Fix a Bug reported: 2 points.
-- Code Refactoring for Readability and Testability: 1 point for refactoring the code to enhance readability and testability.
-- Continuous Integration/Continuous Deployment (CI/CD): 1 point for successfully implementing CI/CD in the project.
-- Adding an Improvement/New Feature: 5 points for each improvement or new feature added to the game.
+| Criterion                                          | Points        |
+|----------------------------------------------------|---------------|
+| Creating a Manual Test Plan                        | 1 point       |
+| Automated Testing for Specific Features            | 5 points for the first test case, 1 extra point for each additional successfully automated feature |
+| Different Types of Automated Tests                 | 1 point for each type of automated test (unit, integration, end-to-end, etc.) |
+| Best Coverage for Each Feature                     | 1 point for achieving the best test coverage for each feature (Scoring, Movement, End Game, Collision System) |
+| First to Correctly Report a Bug                    | 1 point       |
+| Fixing a Reported Bug                              | 2 points      |
+| Code Refactoring for Readability and Testability   | 1 point       |
+| Implementing CI/CD                                 | 1 point       |
+| Adding an Improvement/New Feature                  | 5 points for each improvement or new feature added |
+| Best new Feature                                   | 5 points      |
+| MHP (Most Helpful Player)                          | 5 points      |
 
 At the end of the allocated time, all projects will be reviewed, points will be summed up, and a winner will be announced.
 
