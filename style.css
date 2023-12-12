@@ -1,0 +1,59 @@
+#canvas1 {
+  border: 3px solid black;
+  background: url("assets/background.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+#gameContainer {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#passwordPrompt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("assets/background.png");
+  padding: 20px;
+  border: 3px solid black;
+  text-align: center;
+  color: #fff;
+}
+
+#passwordPrompt h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#passwordInput {
+  font-family: "Orbitron", sans-serif;
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #a7a4cc;
+}
+
+#passwordPrompt button {
+  font-family: "Orbitron", sans-serif;
+  width: 80%;
+  padding: 10px 20px;
+  background-color: #a7a4cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#passwordPrompt button:hover {
+  background-color: #918bc3;
+}

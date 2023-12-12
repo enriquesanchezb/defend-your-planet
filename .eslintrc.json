@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+     "plugins": ["jest"],
+    "extends": ["eslint:recommended","plugin:jest/recommended"],  
+    "rules": {
+    }
+}

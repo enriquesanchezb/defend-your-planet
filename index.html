@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Defend your planet!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="passwordPrompt">
+      <h2>Add password to play</h2>
+      <img src="assets/planet.png" />
+      <input type="password" id="passwordInput" placeholder="Enter password" />
+      <button onclick="checkPassword()">Start Game</button>
+    </div>
+    <div id="gameContainer">
+      <canvas id="canvas1"></canvas>
+      <div class="hidden">
+        <img src="assets/planet.png" id="planet" />
+        <img src="assets/player.png" id="player" />
+        <img src="assets/asteroid.png" id="asteroid" />
+        <img src="assets/lobstermorph.png" id="lobster" />
+        <img src="assets/beetlemorph.png" id="beetle" />
+        <img src="assets/rhinomorph.png" id="rhino" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
