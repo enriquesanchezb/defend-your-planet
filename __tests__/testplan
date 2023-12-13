@@ -1,0 +1,10 @@
+Testplan
+
+Password: 
+1  enter the right password -> you can play
+2  enter the wrong password -> you can't play
+
+Game: 
+1  I can kill all the enemies 
+2  When I shot, The score is updated
+3  The lives decreasing when the enemies shot me
