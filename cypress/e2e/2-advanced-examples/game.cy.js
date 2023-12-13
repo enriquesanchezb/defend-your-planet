@@ -25,25 +25,26 @@ describe("Game Interaction", () => {
     // You should adjust the coordinates based on your game mechanics
     cy.get("#canvas1").click(400, 400); // Replace with your actual coordinates
   });
+  describe("Score Calculation", () => {
+    it("Score points through various actions and verify accuracy", () => {
+      // Step 2: Capture the initial score.
+      let initialScore;
+      cy.get("#scoreElement") // Replace with the actual identifier of the score element.
+        .invoke("text")
+        .then((score) => {
+          initialScore = parseInt(score, 10);
+        });
 
-  describe("Game Initialization", () => {
-    it("Launch the game", () => {
-      // Step 1: Open the game webpage.
-      cy.visit("https://enriquesanchezb.github.io/defend-your-planet/");
+      // Step 3: Capture the final score.
+      let finalScore;
+      cy.get("#scoreElement") // Replace with the actual identifier of the score element.
+        .invoke("text")
+        .then((score) => {
+          finalScore = parseInt(score, 10);
+        });
 
-      // Step 2: Ensure the game canvas is displayed.
-      cy.get("#canvas1").should("be.visible");
-
-      // Step 3: Verify the game starts without errors.
-      // You may need to add additional verification steps based on your game's behavior.
-
-      // Add a wait for the game to start, for example, by waiting for a specific element to be present.
-      cy.get("#some_element_in_your_game").should("exist");
-
-      // Optionally, you can capture a screenshot for further analysis if the test fails.
-      cy.screenshot("game_screenshot");
-
-      // Expected Result: The game initializes successfully without any visible errors.
+      // Ensure that the final score is greater than the initial score.
+      expect(finalScore).to.be.greaterThan(initialScore);
     });
   });
 });
