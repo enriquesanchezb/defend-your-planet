@@ -1,10 +1,23 @@
+
+/* Existing CSS Variables */
+:root {
+  --border-main: 3px solid black;
+  --background-image: url("assets/background.png");
+  --main-text-color: #fff;
+  --font-family-main: "Orbitron", sans-serif;
+  --input-border-color: #a7a4cc;
+  --button-bg-color: #a7a4cc;
+  --button-bg-color-hover: #918bc3;
+}
+
+/* Existing Styles */
 #canvas1 {
-  border: 3px solid black;
-  background: url("assets/background.png");
+  border: var(--border-main);
+  background: var(--background-image);
   position: absolute;
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
 }
 
 #gameContainer {
@@ -20,33 +33,33 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url("assets/background.png");
+  background: var(--background-image);
   padding: 20px;
-  border: 3px solid black;
+  border: var(--border-main);
   text-align: center;
-  color: #fff;
+  color: var(--main-text-color);
 }
 
 #passwordPrompt h2 {
-  font-family: "Orbitron", sans-serif;
-  color: #fff;
+  font-family: var(--font-family-main);
+  color: var(--main-text-color);
   margin-bottom: 15px;
 }
 
 #passwordInput {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-family-main);
   width: 80%;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #a7a4cc;
+  border: var(--input-border);
 }
 
 #passwordPrompt button {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-family-main);
   width: 80%;
   padding: 10px 20px;
-  background-color: #a7a4cc;
+  background-color: var(--button-bg-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -55,5 +68,31 @@
 }
 
 #passwordPrompt button:hover {
-  background-color: #918bc3;
+  background-color: var(--button-bg-color-hover);
+}
+
+/* Responsive Gameplay Design */
+@media (max-width: 768px) {
+  /* Adjusting canvas size for smaller screens */
+  #canvas1 {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* Additional Responsive Design for the password prompt */
+@media (max-width: 768px) {
+  #passwordInput, #passwordPrompt button {
+    width: 90%;
+  }
+
+  #passwordPrompt {
+    width: 80%;
+    padding: 15px;
+  }
+
+  #passwordPrompt h2 {
+    font-size: 1.2em;
+  }
 }
