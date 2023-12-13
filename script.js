@@ -266,6 +266,29 @@ class Rhino extends Enemy {
 }
 
 class Game {
+  restart() {
+    // Reset game state
+    this.projectilePool.forEach((projectile) => {
+      projectile.reset();
+    });
+
+    this.enemyPool.forEach((enemy) => {
+      enemy.reset();
+    });
+
+    this.player = new Player(this);
+    this.enemyPool[0].start();
+    this.enemyTimer = 0;
+    this.spriteUpdate = false;
+    this.spriteTimer = 0;
+    this.gameOver = false;
+    this.score = 0;
+    this.lives = 10;
+
+    // Show password prompt
+    document.getElementById("gameContainer").style.display = "none";
+    document.getElementById("passwordPrompt").style.display = "block";
+  }
   constructor(canvas) {
     this.canvas = canvas;
     this.width = this.canvas.width;
@@ -312,6 +335,8 @@ class Game {
       if (e.key === "d") this.debug = !this.debug;
       else if (e.code === "Space") this.player.shoot();
     });
+
+    
   }
 
   render(context, deltaTime) {
@@ -445,7 +470,14 @@ function startGame() {
     lastTime = timeStamp;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     game.render(ctx, deltaTime);
-    requestAnimationFrame(animate);
+    if (game.gameOver) {
+      // Game over logic
+      alert("Game over! Your score is " + game.score);
+      // Restart the game
+      game.restart();
+    } else {
+      requestAnimationFrame(animate);
+    }
   }
   requestAnimationFrame(animate);
 }
