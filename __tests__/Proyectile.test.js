@@ -1,6 +1,16 @@
-import Projectile from './Projectile';
+const {Projectile} = require('../script')
 
 describe('Projectile', () => {
+    beforeEach(() => {
+            document.getElementById = jest.fn().mockImplementation((id) => {
+              if (id === 'passwordInput') {
+                return {
+                  addEventListener: jest.fn(),
+                };
+              }
+              return null;
+            });
+          });
   const mockGame = { width: 800, height: 600 };
 
   test('should be initially marked as free', () => {
