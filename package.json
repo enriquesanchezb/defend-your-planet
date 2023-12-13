@@ -100,10 +100,10 @@
     "jest": "^29.7.0"
   },
   "scripts": {
-    "test_jest": "jest",
+    "test": "jest",
     "lint": "eslint .",
     "test:coverage": "jest --coverage",
-    "test": "cypress run"
+    cypress": "cypress run"
   },
   "jest": {
     "verbose": true,
