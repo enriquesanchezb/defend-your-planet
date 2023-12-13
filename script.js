@@ -473,3 +473,9 @@ function encodePassword(password) {
   var aux = btoa(encoded);
   return aux;
 }
+
+document.getElementById("passwordInput").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    checkPassword();
+  }
+});
