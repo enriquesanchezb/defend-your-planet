@@ -16,7 +16,12 @@
     <div id="passwordPrompt">
       <h2>Add password to play</h2>
       <img src="assets/planet.png" />
-      <input type="password" id="passwordInput" placeholder="Enter password" />
+      <input
+        type="password"
+        id="passwordInput"
+        placeholder="Enter password"
+        onkeydown="if(event.key==='Enter'){checkPassword()}"
+      />
       <button onclick="checkPassword()">Start Game</button>
     </div>
     <div id="gameContainer">
