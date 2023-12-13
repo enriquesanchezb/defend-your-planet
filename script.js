@@ -481,7 +481,6 @@ function startGame() {
   }
   requestAnimationFrame(animate);
 }
-
 function checkPassword() {
   var userInput = document.getElementById("passwordInput").value;
   var encodedPassword = "Y0hIfWczZXhmcVE+";
@@ -505,9 +504,5 @@ function encodePassword(password) {
   var aux = btoa(encoded);
   return aux;
 }
+module.exports={Enemy,Planet,Player,Projectile,Game}
 
-document.getElementById("passwordInput").addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
-    checkPassword();
-  }
-});
