@@ -19,7 +19,7 @@
       <input type="password" id="passwordInput" placeholder="Enter password" />
       <button onclick="checkPassword()">Start Game</button>
     </div>
-    <div id="gameContainer">
+    <div id="gameContainer" style="display: none;">
       <canvas id="canvas1"></canvas>
       <div class="hidden">
         <img src="assets/planet.png" id="planet" />
@@ -29,6 +29,8 @@
         <img src="assets/beetlemorph.png" id="beetle" />
         <img src="assets/rhinomorph.png" id="rhino" />
       </div>
+      <button onclick="endGame()">End Game</button>
+      <button onclick="restartGame()">Restart Game</button>
     </div>
     <script src="script.js"></script>
   </body>
