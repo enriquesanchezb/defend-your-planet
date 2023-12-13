@@ -25,21 +25,22 @@ describe("Game Interaction", () => {
     // You should adjust the coordinates based on your game mechanics
     cy.get("#canvas1").click(400, 400); // Replace with your actual coordinates
   });
-  describe("Game Initialization", () => {
-    it("Launch the game", () => {
+
+  describe("Authentication", () => {
+    it("Enter correct password", () => {
       // Step 1: Open the game webpage.
-      cy.visit("https://enriquesanchezb.github.io/defend-your-planet/");
+      cy.visit("/");
 
-      // Step 2: Ensure the game canvas is displayed.
-      cy.get("#canvas1").should("be.visible");
+      // Step 2: Enter the correct password in the authentication prompt.
+      const correctPassword = "your_correct_password";
+      cy.get("#passwordInput").type(correctPassword);
 
-      // Step 3: Verify the game starts without errors.
-      // You may need to add additional verification steps based on your game's behavior.
+      // Step 3: Confirm that the game starts.
+      cy.get("#gameContainer").should("be.visible");
 
-      // Add a wait for the game to start, for example, by waiting for a specific element to be present.
-      cy.get("#some_element_in_your_game").should("exist");
+      // Step 4: Optionally, you can add additional verification steps to ensure the game is in the expected state.
 
-      // Expected Result: The game initializes successfully without any visible errors.
+      // Expected Result: The game should start when the correct password is entered.
     });
   });
 });
