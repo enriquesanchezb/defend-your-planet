@@ -26,21 +26,24 @@ describe("Game Interaction", () => {
     cy.get("#canvas1").click(400, 400); // Replace with your actual coordinates
   });
 
-  describe("Authentication", () => {
-    it("Enter correct password", () => {
-      // Step 1: Open the game webpage.
-      cy.visit("/");
+  describe("Score Calculation", () => {
+    it("Score points through various actions and verify accuracy", () => {
+      let initialScore;
+      cy.get("#scoreElement") // Replace with the actual identifier of the score element.
+        .invoke("text")
+        .then((score) => {
+          initialScore = parseInt(score, 10);
+        });
 
-      // Step 2: Enter the correct password in the authentication prompt.
-      const correctPassword = "your_correct_password";
-      cy.get("#passwordInput").type(correctPassword);
+      // Step 3: Capture the final score.
+      let finalScore;
+      cy.get("#scoreElement") // Replace with the actual identifier of the score element.
+        .invoke("text")
+        .then((score) => {
+          finalScore = parseInt(score, 10);
+        });
 
-      // Step 3: Confirm that the game starts.
-      cy.get("#gameContainer").should("be.visible");
-
-      // Step 4: Optionally, you can add additional verification steps to ensure the game is in the expected state.
-
-      // Expected Result: The game should start when the correct password is entered.
+      expect(finalScore).to.be.greaterThan(initialScore);
     });
   });
 });
